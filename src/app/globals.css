@@ -1,0 +1,386 @@
+@import 'tailwindcss';
+@theme inline {
+  --color-background: #0b0b0d;
+  --color-foreground: #f1ebe0;
+  --color-primary: #dec49b;
+  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+:root {
+  color-scheme: dark;
+  --bg: #0b0b0d;
+  --gold: #dec49b;
+  --text: #f1ebe0;
+  --muted: #a69b8c;
+  --border: #ffffff19;
+}
+* {
+  box-sizing: border-box;
+  letter-spacing: 0;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 4px;
+}
+*:focus-visible {
+  outline: 2px solid var(--gold);
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  overflow-wrap: anywhere;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  font-weight: 500;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+}
+p,
+small {
+  color: var(--muted);
+}
+svg {
+  flex-shrink: 0;
+}
+::selection {
+  background: var(--gold);
+  color: var(--bg);
+}
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 600;
+}
+.button {
+  min-height: 48px;
+  padding: 12px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 13px;
+  white-space: normal;
+}
+.button-gold {
+  background: var(--gold);
+  color: #1c1913;
+}
+.button-gold:hover {
+  background: #edd7b7;
+}
+.button-outline {
+  background: transparent;
+  border-color: #dec49b50;
+  color: var(--text);
+}
+.button-outline:hover {
+  background: #dec49b0b;
+}
+.button-ghost {
+  background: transparent;
+  color: var(--muted);
+}
+.button-sm {
+  min-height: 44px;
+  padding: 8px 13px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.brand-mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  color: var(--gold);
+  border: 1px solid #dec49b55;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  font-style: italic;
+}
+.brand-mark span {
+  font-size: 25px;
+}
+.brand-sub {
+  display: block;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.monogram {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid #dec49b40;
+  border-radius: 8px;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin: 0 auto 16px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  min-width: 0;
+}
+.field > span {
+  color: #d2c8ba;
+}
+.field small {
+  font-size: 11px;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #141416;
+  color: var(--text);
+  padding: 12px 13px;
+  font-size: 16px;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #dec49b80;
+}
+textarea {
+  resize: vertical;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #8e867c;
+}
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 14px 16px;
+  border: 1px solid #dec49b30;
+  border-radius: 8px;
+  font-size: 12px;
+  margin: 0;
+  color: #c8baaa;
+  overflow-wrap: anywhere;
+}
+.error {
+  color: #f0b8ad;
+  border-color: #bd7a6750;
+}
+.spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.review-page {
+  min-height: 100dvh;
+  padding: 24px 16px;
+}
+.review-wrap {
+  max-width: 440px;
+  margin: auto;
+}
+.review-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.review-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.review-header h1 {
+  font-size: 29px;
+  margin-bottom: 8px;
+}
+.review-header p {
+  font-size: 13px;
+}
+.business-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 0 auto 18px;
+}
+.review-card {
+  border-top: 1px solid #dec49b40;
+  padding: 24px 0 0;
+}
+.step-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  margin-bottom: 24px;
+}
+.step-line span {
+  height: 1px;
+  background: #dec49b30;
+  flex: 1;
+}
+.review-card h2 {
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+.review-card > p {
+  font-size: 13px;
+}
+.stars {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  margin: 22px 0 8px;
+}
+.stars button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: 0;
+  padding: 7px;
+  color: #736a5b;
+}
+.stars button.chosen {
+  color: var(--gold);
+}
+.rating-caption {
+  text-align: center;
+  color: var(--gold);
+  font-size: 12px;
+  min-height: 20px;
+  margin-bottom: 22px;
+}
+.review-card .field {
+  margin: 18px 0;
+}
+.review-card textarea {
+  line-height: 1.7;
+}
+.review-card .button {
+  width: 100%;
+  margin-top: 12px;
+}
+.review-card .notice {
+  margin-top: 16px;
+}
+.review-disclosure {
+  text-align: center;
+  font-size: 11px;
+  margin: 20px 4px;
+  color: var(--muted);
+}
+.google-direct {
+  text-align: center;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  margin-top: 22px;
+}
+.google-direct a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--gold);
+  min-height: 44px;
+}
+.review-footer {
+  text-align: center;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 27px;
+}
+.review-footer a {
+  display: inline-block;
+  padding: 12px;
+}
+.center-page {
+  max-width: 620px;
+  margin: 40px auto;
+  padding: 24px;
+}
+.privacy h2 {
+  margin-top: 32px;
+}
+.text-link {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (min-width: 720px) {
+  .review-page {
+    padding: 40px 24px;
+  }
+  .center-page {
+    margin-top: 80px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

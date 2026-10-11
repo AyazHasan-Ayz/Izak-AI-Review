@@ -1,0 +1,20 @@
+[
+  {
+    "id": "test-cafe",
+    "name": "Test Cafe",
+    "logo_url": "https://example.com/izak-test-logo.png",
+    "google_review_url": "https://g.page/r/test/review",
+    "token_hash": "66d34fba71f8f450f7e45598853e53bfc23bbd129027cbb131a2f4ffd7878cd0",
+    "status": "active",
+    "category": "Cafe",
+    "city": "Mumbai"
+  },
+  {
+    "id": "inactive-cafe",
+    "name": "Inactive Cafe",
+    "logo_url": "https://example.com/izak-test-logo.png",
+    "google_review_url": "https://g.page/r/test/review",
+    "token_hash": "f01b57226261ae3756b93936e1c4e6b849f9a5b0933fa3b91843bf4195b9d964",
+    "status": "inactive"
+  }
+]
