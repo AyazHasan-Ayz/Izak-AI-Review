@@ -1,5 +1,7 @@
 # Owner Setup
 
+For the current Supabase-backed private dashboard, use [ADMIN_SETUP.md](ADMIN_SETUP.md). Everything below is retained only for legacy file-mode deployments and migration. Do not use these file provisioning commands for dashboard-managed businesses.
+
 ## Server secrets
 
 Keep `GROQ_API_KEY` in `.env.local` locally and in your host's secret environment variables in production. Never prefix it with `NEXT_PUBLIC_`, put it in Next config `env`, send it to the browser, or commit `.env.local`. `GROQ_MODEL` defaults to the existing `openai/gpt-oss-20b` model. Set `APP_URL` to the exact HTTPS production origin. The backend rejects missing production origin configuration and cross-origin browser requests.

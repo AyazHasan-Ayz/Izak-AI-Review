@@ -1,5 +1,7 @@
 # Vercel Deployment Repair
 
+For the newer private Supabase admin dashboard, follow [ADMIN_SETUP.md](ADMIN_SETUP.md) for current environment variables, database setup and cutover. The 404 diagnosis and framework settings below remain applicable; file-based client provisioning is now legacy only.
+
 ## Confirmed cause
 
 On 11 October 2026, both `/` and `/privacy` returned HTTP 404 with `x-vercel-error: NOT_FOUND`. These were Vercel platform errors, not the Next.js application's not-found page.

@@ -15,9 +15,16 @@ it.skipIf(!fs.existsSync('.next/static'))(
   'has no private key values or client configuration hashes in built client assets',
   () => {
     const env = fs.existsSync('.env.local') ? fs.readFileSync('.env.local', 'utf8') : '';
-    const secrets = [parseEnv(env).GROQ_API_KEY, process.env.GROQ_API_KEY].filter(
-      (v): v is string => !!v && v.length > 15,
-    );
+    const privateNames = [
+      'GROQ_API_KEY',
+      'SUPABASE_SERVICE_ROLE_KEY',
+      'REVIEW_TOKEN_ENCRYPTION_KEY',
+      'ABUSE_HASH_SECRET',
+    ];
+    const parsedEnv = parseEnv(env);
+    const secrets = privateNames
+      .flatMap((name) => [parsedEnv[name], process.env[name]])
+      .filter((v): v is string => !!v && v.length > 15);
     const clients = fs.existsSync('private/clients.json')
       ? JSON.parse(fs.readFileSync('private/clients.json', 'utf8'))
       : [];

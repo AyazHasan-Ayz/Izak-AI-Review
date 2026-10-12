@@ -43,7 +43,6 @@ test('removed account, business configuration and QR APIs are unavailable', asyn
     '/reset-password',
     '/dashboard',
     '/dashboard/qr',
-    '/admin',
     '/admin/clients',
     '/private/clients.json',
     '/private/issued/test-cafe.token',

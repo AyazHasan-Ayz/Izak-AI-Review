@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
-import { authorizeClient, publicClient } from '@/lib/clients';
+import { publicClient } from '@/lib/clients';
+import { resolveClient } from '@/lib/businesses';
 import { PublicError } from '@/lib/public-error';
 import { ReviewFlow } from '@/components/review-flow';
 
@@ -11,7 +12,7 @@ export default async function Page({ params }: { params: Promise<{ token: string
   const { token } = await params;
   let client;
   try {
-    client = authorizeClient(token);
+    client = await resolveClient(token);
   } catch (error) {
     if (error instanceof PublicError && error.status === 404) notFound();
     throw error;

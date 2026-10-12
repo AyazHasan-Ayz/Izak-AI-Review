@@ -1,4 +1,6 @@
-# Stateless Abuse Protection
+# Abuse Protection
+
+The Supabase admin architecture and enforced durable limits are documented in [ADMIN_SETUP.md](ADMIN_SETUP.md). That guide supersedes the legacy file-mode notes below. In Supabase mode the app stores business settings and expiring keyed usage counters only, plus essential admin/review session cookies. It never stores customer review content. The remaining hosting/provider protections below are still required.
 
 ## Application boundary
 

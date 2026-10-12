@@ -19,6 +19,12 @@ export default function Page() {
       </p>
       <h2>Your review</h2>
       <p>
+        Abuse protection uses a temporary, essential session cookie and daily keyed hashes of
+        network addresses. Only generation-attempt counters are stored, not raw IP addresses
+        or review content. These counters expire at the end of the UTC day and are removed
+        on subsequent generation requests or by scheduled cleanup.
+      </p>
+      <p>
         AI can make mistakes. Check and edit the draft before using it. Copying writes the review to
         your device clipboard. Nothing is automatically posted.
       </p>
